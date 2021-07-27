@@ -85,10 +85,38 @@ address{
         padding: 23px 20px 38px;
     }
 
-    @media(max-width: 768px){
-        display: flex;
-        justify-content: space-between;
+    @media(max-width: 1220px){
         padding: 23px 20px;
+    }
+
+}
+
+
+.header_scrolled{
+    position: fixed;
+    top: 0;
+    opacity: 1;
+
+    animation: headerFadeIn .5s linear;
+
+    .shopping-bar{
+        display: none;
+    }
+
+    .header__inner{
+        padding-top: 17px;
+        padding-bottom: 17px;
+    }
+}
+
+@keyframes headerFadeIn {
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0%);
     }
 }
 
@@ -186,6 +214,8 @@ address{
 
 }
 
+
+
 .f-logo{
     margin-top: 50px;
     margin-right: 90px;
@@ -230,6 +260,19 @@ address{
     }
 
 }
+
+.h-logo_scrolled{
+    .logo__img{
+        max-width: 360px;
+        max-height: 81px;
+    }
+
+    .logo__slogan{
+        font-size: 12.5px;
+        bottom: 14px;
+    }
+}
+
 
 .f-logo__img{
     max-width: 512px;
@@ -369,6 +412,11 @@ address{
 
     @media(max-width: 1200px){
         flex-direction: column;
+        padding: 0 0px 190px 25px;
+    }
+    @media( max-width: 600px ){
+        padding: 0 23px 150px 23px;
+        align-items: center;
     }
 
 }
