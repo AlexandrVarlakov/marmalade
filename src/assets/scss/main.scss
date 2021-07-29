@@ -250,7 +250,7 @@ address{
     
     left: 0;
     display: none;
-    z-index: 10;
+    z-index: 15;
     margin-top: -5px;
     
 }
@@ -274,7 +274,7 @@ address{
     &:hover{
         .catalog-drop{
             display: block;
-            animation: showDrop .5s linear;
+            animation: showDrop .5s ease-out;
         }
     }
 }
@@ -283,12 +283,12 @@ address{
     from{
         opacity: 0;
         transform: translateY(-15px);
-        z-index: -1;
+        
     }
     to{
         opacity: 1;
         transform: translateY(0px);
-        z-index: 1;
+        
     }
 }
 
@@ -660,6 +660,7 @@ address{
     transform: translateX(-100%);
     transition: .5s;
     position: fixed;
+    z-index: 999;
     @media (min-width: 1121px){
         display: none !important;
     }
