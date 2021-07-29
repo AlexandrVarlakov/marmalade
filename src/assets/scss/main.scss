@@ -62,8 +62,11 @@ address{
     max-width: 1545px;
     min-height: 1500px;
 
+    padding: 15px 0 123px;
     @media(max-width: 1595px){
         max-width: 100%;
+
+        
     }
 }
 
@@ -301,10 +304,8 @@ address{
     flex-grow: 1;
     font-size: 30px;
     margin-bottom: 35px;
-
-    @media (max-width: 768px){
-        font-weight: normal;
-    }
+    font-weight: normal;
+    
 }
 
 .products__list{
@@ -763,4 +764,102 @@ address{
     justify-content: center;
     padding: 6px 0;
     margin-left: 0;
+}
+
+.page-navigate{
+    display: flex;
+    padding: 35px 60px;
+}
+
+
+.breadcrumbs{
+    flex-grow: 1;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.breadcrumbs__inner{
+    overflow: hidden;
+    display: flex;
+    
+}
+.breadcrumbs__link{
+    font-size: 18px;
+    text-decoration: none;
+    color: #fe4944;
+    display: flex;
+
+    &:not(:first-of-type){
+        margin-left: 5px;
+    }
+}
+
+.breadcrumbs__link_current{
+    color: #7d7d7d;
+}
+
+.breadcrumbs__icon{
+    margin-right: 15px;
+}
+
+.search-form{
+    width: 490px;
+}
+
+.search-form__input-wrap{
+    width: 100%;
+}
+
+.search-form__input{
+    width: 100%;
+    border-radius: 10px;
+    border: solid 1px #c4c3c1;
+    background-color: #f8f8f8;
+    padding: 15px 27px;
+
+
+    font-family: $os;
+    font-weight: normal;
+    color: #202020;
+    font-size: 18px;
+
+    &::placeholder{
+        color: #7d7d7d;
+        text-transform: uppercase;
+    }
+}
+
+
+.low-banners{
+    width: 100%;
+    
+}
+
+.low-banner{
+    display: flex !important;
+    width: 100%;
+    height: 545px !important;
+    background: url('../img/banners/low-banner-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 0 190px;
+}
+.low-banner__text{
+    max-width: 575px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.low-banner__title{
+    font-size: 61px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.low-banner__description{
+    font-size: 30px;
+    font-weight: normal;
+    color: #fff;
 }

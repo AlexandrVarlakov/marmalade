@@ -1,5 +1,22 @@
+
+$('.low-banners').slick();
+
+
+
 $(document).on('scroll', function(){
-    if ( $(window).scrollTop() >= ( $('.page-content__inner').offset().top  -50 ) )  {
+    if ( $(window).scrollTop() >= ( $('.header').height()  ) )  {
+
+        if ( $('.header-space').length < 1 ){
+            let headerHeight = $('.header').height();
+            $('body').prepend('<div class="header-space"></div');
+            $('.header-space').css('width', '100%');
+            $('.header-space').css('min-height', headerHeight + 'px');
+            $('.header-space').css('height', headerHeight + 'px');
+        }
+
+        
+        
+
         $('.header').addClass('header_scrolled');
 
         if ( $('.logo__img').width() > 478 ) {
@@ -7,7 +24,7 @@ $(document).on('scroll', function(){
         }
 
     } else{
-        
+        $('.header-space').remove();
         $('.header').removeClass('header_scrolled');
         $('.h-logo').removeClass('h-logo_scrolled')
 
