@@ -2,6 +2,10 @@
 $('.low-banners').slick();
 
 
+$('.hight-banners').slick({
+    dots: true,
+});
+
 
 $(document).on('scroll', function(){
     if ( $(window).scrollTop() >= ( $('.header').height()  ) )  {
@@ -149,4 +153,29 @@ $('.hamburger').on('click', function(){
         $('.mob-menu').css('transform', 'translateX(0%)');
 
     }
+})
+
+$('.show-all-filters-btn').on('click', function(){
+    
+
+    $('.cat-filter-btn_hidden').addClass('cat-filter-btn_show');
+
+    $(this).addClass('cat-filter-btn_hidden');
+});
+
+$('.hide-filters-btn').on('click', function(){
+
+
+    $('.show-all-filters-btn').removeClass('cat-filter-btn_hidden');
+    $('.cat-filter-btn_hidden').addClass('hide-filter-btn');
+    $('.cat-filter-btn_hidden').hide(300);
+    setTimeout(() => {
+        $('.cat-filter-btn_hidden').removeClass('cat-filter-btn_show');
+        $('.hide-filter-btn').removeClass('hide-filter-btn');
+        
+    }, 300);
+
+    setTimeout(() => {
+        $('.cat-filter-btn_hidden').css('display', '');
+    }, 500)
 })
