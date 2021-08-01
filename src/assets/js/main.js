@@ -179,3 +179,50 @@ $('.hide-filters-btn').on('click', function(){
         $('.cat-filter-btn_hidden').css('display', '');
     }, 500)
 })
+
+//ВСТАВКА НОВОВСТЕЙ
+$('.upload-news').on('click', function(){
+    createNews("assets/img/products/news-1.png", 'Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт', "#");
+    createNews("assets/img/products/news-2.png", 'Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт', "#");
+})
+
+
+function createNews(imgLink, shortText, linkToNews){
+    $('.news-block__inner').append(
+        '<div class="short-news short-news_inserted">'+
+            '<div class="short-news__img-block">'+
+                '<img class="short-news__img" src="'+imgLink+'" alt="">'+
+            '</div>'+
+            '<div class="short-news__text-block">'+
+                '<p class="short-news__text">'+shortText+'</p>'+
+                '<a class="short-news__link" href="'+linkToNews+'">Читать подробнее</a>'+
+            '</div>'+
+        '</div>'
+    );    
+}
+
+//вставка yuotube iframe
+
+$('.video-layer').on('click', function(){
+    
+    if  ( $(this).attr('data-video').length > 0 ) {
+        $(this).after($(this).attr('data-video'));
+        $(this).attr('data-video', '');
+        $('.s-news--prop-block-i').children('iframe').attr('width', "100%");
+        $('.s-news--prop-block-i').children('iframe').attr('height', "100%");
+
+        $('.s-news--prop-block-i').children('iframe').on('load', function(){
+            $('.video-layer').hide(10);    
+        })
+    }
+    
+})
+
+
+                        
+                            
+                        
+
+                        
+                            
+                  
