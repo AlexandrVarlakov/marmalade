@@ -330,12 +330,10 @@
                             Главная > 
                         </a>
 
-                        <a href="news.html" class="breadcrumbs__link ">
-                             Новости >
+                        <a href="news.html" class="breadcrumbs__link breadcrumbs__link_current">
+                            Авторизация
                         </a>
-                        <a href="#" class="breadcrumbs__link breadcrumbs__link_current">
-                            Очень-очень интересная новость 
-                       </a>
+                       
                     </div>
                     
                 </div>
@@ -347,138 +345,57 @@
             </section>
             <!--END: section page-navigate-->
 
-           
-                
-                <div class="news-preview">
-                    
-                    <div class="news-preview__text-block news-preview__text-block_first">
-                        <p class="article-date">09:56, 1 июля 2021</p>
-                        <h1 class="small-title news-preview__title">«Примитивный гений: <br />платоновская академия или конфликт?»</h1>
-                        <p class="text">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис.</p>
+            <div class="page-block page-block_first">
+                <h1 class="small-title">Личный кабинет</h1>
+
+                <div class="reg-row">
+                    <div class="reg-img-block col-2">
+                        <img src="assets/img/reg-img.png">
                     </div>
+                    <div class="reg-form-block col-2">
+                        <h2 class="small-title reg-form-title">Авторизация</h2>
 
-                    <div class="news-preview__img-block">
-                        <img class="news-preview__img" src="assets/img/news-inner.png" alt="Главная новость">
-                    </div>
-
-                    <div class="news-preview__text-block news-preview__text-block_100">
-                        <p class="text black">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис. Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис.</p>
-                    </div>
-
-                </div>
-
-
-                <div class="page-block s-news--media">
-
-                    <div class="s-news--media-item">
-                        <div class="s-news--prop-block">
-                            <div class="s-news--prop-block-i">
-                                <img class="s-news--img" src="assets/img/news-inner-2.png" alt="">
+                        <form action="POST" class="reg-form">
+                            <div class="reg-form__input-wrap">
+                                <input class="reg-form__input" type="text" name="login" id="login" required placeholder="Имя пользователя или email">
                             </div>
-                        </div>
-                    </div>
-                    <div class="s-news--media-item">
-                        <div class="s-news--prop-block">
-                            <div class="s-news--prop-block-i">
+                            <div class="reg-form__input-wrap reg-form__password">
+                                <input class="reg-form__input" type="password" name="password" id ="password" required placeholder="Пароль">
+                                <div class="show-password ">
+                                    <img src="assets/img/view.png" title="Показать пароль">
+                                </div>
+                            </div>
 
-                                <!--
-                                    data-video - хранится ссылка на видео
-                                -->
-
-                                <div class="video-layer" data-video='<iframe  class="video-frame" width="400" height="200" src="https://www.youtube.com/embed/9K9LyKKaqJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay="1"; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'>
-                                    <svg 
-                                        xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            width="58px" height="58px">
-                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                                                d="M29.000,57.998 C12.984,57.998 0.001,45.015 0.001,29.000 C0.001,12.984 12.984,0.001 29.000,0.001 C45.015,0.001 57.998,12.984 57.998,29.000 C57.998,45.015 45.015,57.998 29.000,57.998 ZM41.497,26.582 L25.796,16.017 C24.902,15.416 23.750,15.357 22.799,15.862 C21.848,16.369 21.254,17.358 21.254,18.435 L21.254,39.564 C21.254,40.641 21.848,41.631 22.799,42.137 C23.229,42.366 23.699,42.479 24.168,42.479 C24.738,42.479 25.306,42.312 25.796,41.982 L41.497,31.418 C42.302,30.876 42.784,29.970 42.784,29.000 C42.784,28.030 42.302,27.123 41.497,26.582 Z"/>
-                                    </svg>
-
-                                    <p class="video-layer__text">Смотреть видео</p>
+                            <div class="reg-form__input-wrap auth-btn-block">
+                                <div class="checkbox-wrap">
+                                    <label class="checkbox " for="remember-me">
+                                        <input type="checkbox" class="checkbox__input" checked name="remember-me" id="remember-me">
+                                    </label>
+                                    <label for="remember-me" class="checkbox__label">Запомнить меня</label>
                                 </div>
                                 
+                                <input class = "reg-form__btn" type="submit" value="Войти">
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!--
-                    <div class="s-news--video-block">
-                        <div class="s-news--video-outer">
-                            <div class="s-news--video-inner">
-                                
+                            
+                            <div class="reg-form__btn-wrap remind-block">
+                                <a class="remind-link" href="#">Забыли пароль?</a>
                             </div>
-                        </div>
-                        
-                    </div>-->
-                </div>
 
-                <div class="page-block">
-                    <p class="text black">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис. Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис.</p>
+                            
+                        </form>
+                    </div>
                 </div>
+                
+            </div>
+            
+                
 
                 
                 
             
 
 
-            <!--BEGIN: news-block section-->
 
-            <section class="news-block">
-                <div class="news-block__inner">
-                    <div class="short-news">
-                        <div class="short-news__img-block">
-                            <img class="short-news__img" src="assets/img/products/news-1.png" alt="">
-                        </div>
-
-                        <div class="short-news__text-block">
-                            <p class="short-news__text">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт</p>
-                            <a class="short-news__link" href="#">Читать подробнее</a>
-                        </div>
-                    </div>
-
-                    <div class="short-news">
-                        <div class="short-news__img-block">
-                            <img class="short-news__img" src="assets/img/products/news-2.png" alt="">
-                        </div>
-
-                        <div class="short-news__text-block">
-                            <p class="short-news__text">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт</p>
-                            <a class="short-news__link" href="#">Читать подробнее</a>
-                        </div>
-                    </div>
-
-
-                    
-
-                    
-                </div>
-            </section>
-
-            <!--END: news-block section-->
-        
-
-            <!--BEGIN: section low-banners-->
-            <section class="low-banners">
-
-
-                <div class="low-banner">
-                    <div class="low-banner__text">
-                        <h2 class="low-banner__title big-title">Мы точно знаем чем удивить вас!</h2>
-
-                        <h3 class="low-banner__description">Удивительные сладости со всего мира</h3>
-                    </div>                    
-                </div>
-
-                <div class="low-banner">
-                    <div class="low-banner__text">
-                        <h2 class="low-banner__title big-title">Мы точно знаем чем удивить вас!</h2>
-
-                        <h3 class="low-banner__description">Удивительные сладости со всего мира</h3>
-                    </div>                    
-                </div>
-
-            </section>
-            <!--END: section low-banners-->
         </div>
     </main>
     <!--END: main-section page-content -->

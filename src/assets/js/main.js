@@ -222,7 +222,148 @@ $('.video-layer').on('click', function(){
                         
                             
                         
-
+if ( $('.checkbox__input').is(':checked') ){
+    $('.checkbox__input').parent().addClass( 'checkbox_checked');
+} else {
+	
+}
                         
-                            
-                  
+$('.checkbox__input').on('click', function(){
+    if ( $('.checkbox__input').is(':checked') ){
+        $('.checkbox__input').parent().addClass( 'checkbox_checked');
+    } else {
+        $('.checkbox__input').parent().removeClass( 'checkbox_checked');
+    }
+})
+
+$('.show-password').on('click', function(){
+    let wrap = $(this).parent();
+
+    if ( wrap.hasClass('show-password_hidden') ) {
+        wrap.removeClass('show-password_hidden');
+        $(this).children('img').attr('title', 'Показать пароль');
+        wrap.children('.reg-form__input').attr('type', 'password');
+    } else{
+        wrap.addClass('show-password_hidden');
+        $(this).children('img').attr('title', 'Скрыть пароль');
+        wrap.children('.reg-form__input').attr('type', 'text');
+    }
+})
+        
+
+$('.clear-buys-btn').on('click', function(){
+    $('.table-buy-list').remove();
+    $(this).parent().parent().append('<p class="text">Список покупок пуст </p>');
+    $('.clear-buys-block').remove();
+    
+})
+$('.del-cell').on('click', function(){
+    let row = $(this).parent();
+    let table = row.parent();
+    let container = table.parent();
+    
+    row.remove();
+    
+    if ( table.children('tr').length == 0){
+        $(table).remove();
+        $('.clear-buys-block').remove();
+        container.append('<p class="text">Список покупок пуст </p>');
+    }
+});
+
+$('.select-qty').on('click', function(){
+
+    let list = $(this).children('.select-qty__list');
+    let listHeight = list.height();
+
+    let currentHeight = $(this).children('.select-qty__current').height();
+
+    let openHeight = listHeight + currentHeight;
+    console.log(listHeight, currentHeight, openHeight);
+    if ( list.hasClass('select-qty__item-open') ){
+        list.removeClass('select-qty__item-open');
+        $(this).css('height', '');
+    } else{
+        list.addClass('select-qty__item-open');
+        $(this).css('height', openHeight + 'px');
+        
+    }
+})
+
+$('.select-qty__item').on('click', function(){
+    let val = $(this).html();
+    $(this).siblings('.select-qty__item').removeClass('select-qty__item_selected');
+    $(this).addClass('select-qty__item_selected');
+    $(this).parent().siblings('.select-qty__current').html(val);
+})
+
+
+$('.clear-cart').on('click', function(){
+    $('.cart__product-item').remove();
+    $(this).remove();
+    $('.cart__product-list').append('<p class="text">Список покупок пуст </p>');
+})
+
+$('.cart__del-product').on('click', function(){
+    let item = $(this).parent().parent();
+    let list = item.parent();
+    
+    item.remove();
+
+    if ( list.children().length < 1 ) {
+        list.append('<p class="text">Список покупок пуст </p>');
+        $('.clear-cart').remove();
+    }
+})
+
+$('.hidden-radio:checked').parent().addClass('radio-btn_selected');
+
+$('.hidden-radio').on('click', function(){
+    $('.radio-btn_selected').removeClass('radio-btn_selected');
+
+    $('.hidden-radio:checked').parent().addClass('radio-btn_selected');
+})
+
+
+
+//Выпадающий список транспортных компаний
+
+$('.select-del').on('click', function(){
+
+    let list = $(this).children('.select-del__list');
+    let listHeight = list.height();
+
+    let currentHeight = $(this).children('.select-del__current').height();
+
+    let openHeight = listHeight + currentHeight;
+    
+    if ( list.hasClass('select-del__item-open') ){
+        list.removeClass('select-del__item-open');
+        $(this).css('height', '');
+    } else{
+        list.addClass('select-del__item-open');
+        $(this).css('height', openHeight + 'px');
+        
+    }
+})
+
+$('.select-del__item').on('click', function(){
+    let val = $(this).html();
+    $(this).siblings('.select-del__item').removeClass('select-del__item_selected');
+    $(this).addClass('select-del__item_selected');
+    $(this).parent().siblings('.select-del__current').html(val);
+    $('#del-company').attr('value', val);
+})
+
+$('input:radio[name=region]').on('click', function(){
+    switch ( $(this).val() ){
+        case '0': 
+                $('.delivery-form__delivery-block').css('display', 'none');
+                $('.delivery-form__address-block').css('display', 'block');
+                break;
+        case '1': 
+                $('.delivery-form__delivery-block').css('display', 'block');
+                $('.delivery-form__address-block').css('display', 'none');
+                break;
+    }
+})

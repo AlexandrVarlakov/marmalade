@@ -330,12 +330,10 @@
                             Главная > 
                         </a>
 
-                        <a href="news.html" class="breadcrumbs__link ">
-                             Новости >
+                        <a href="news.html" class="breadcrumbs__link breadcrumbs__link_current">
+                            Оформить заказ
                         </a>
-                        <a href="#" class="breadcrumbs__link breadcrumbs__link_current">
-                            Очень-очень интересная новость 
-                       </a>
+                       
                     </div>
                     
                 </div>
@@ -347,138 +345,195 @@
             </section>
             <!--END: section page-navigate-->
 
-           
-                
-                <div class="news-preview">
-                    
-                    <div class="news-preview__text-block news-preview__text-block_first">
-                        <p class="article-date">09:56, 1 июля 2021</p>
-                        <h1 class="small-title news-preview__title">«Примитивный гений: <br />платоновская академия или конфликт?»</h1>
-                        <p class="text">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис.</p>
-                    </div>
+            <div class="page-block page-block_first">
+                <h1 class="small-title">Корзина</h1>
 
-                    <div class="news-preview__img-block">
-                        <img class="news-preview__img" src="assets/img/news-inner.png" alt="Главная новость">
-                    </div>
 
-                    <div class="news-preview__text-block news-preview__text-block_100">
-                        <p class="text black">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис. Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис.</p>
-                    </div>
+                <div class="delivery-list">
+                    <div class="delivery-product">
+                        <div class="delivery-product__left-block">
+                            <div class="delivery-product__img-block">
+                                <img class ="delivery-product__img" src="assets/img/product-pos.png" alt="Какой-то продукт">
+                            </div>
+                            <p class="delivery-product__info">Десерт рисовое моти со вкусом винограда без сахара 180гр.</p>
+                        </div>
 
+                        <div class="delivery-product__right-block">
+                            <p class="delivery-product__unit-price">200 <span class="delivery-product__low-text">рублей</span></p>
+                            <div class="delivery-product__add-block">
+                                <button class="delivery-product__dec-product">-</button>
+                                    <p class="delivery-product__qty">1</p>   
+                                <button class="delivery-product__inc-product">+</button>
+                            </div>
+                            <p class="delivery-product__all-price">200 <span class="delivery-product__low-text">рублей</span></p>
+                        </div>
+                        <button class="delivery-product__del-product">x</button>
+                    </div>
                 </div>
 
+                <form action="POST" class="delivery-form">
+                    <div class="delivery-form__inner">
 
-                <div class="page-block s-news--media">
+                    
+                        <div class="contact-col">
+                            <h3 class="small-title black">Оформление заказа</h3>
+                            <p class="text">Пожалуйста, введите свои контактные данные:</p>
+                        
+                            <div class="fd-input-wrap">
+                                <label for="phone" class="small-title black">Телефон <span class="red-star">*</span></label>
+                                <input type="text" class="input-text" name = "phone" id = "phone" placeholder="Ваш телефон">
+                            </div>
+                            <div class="fd-input-wrap">
+                                <label for="name" class="small-title black">Имя <span class="red-star">*</span></label>
+                                <input type="text" class="input-text" placeholder="Имя" name="name" id="name">
+                            </div>
+                            <div class="fd-input-wrap">
+                                <label for="company" class="small-title black">Название организации</label>
+                                <input type="text" class="input-text" placeholder="Название организации" name="company" id="company">
+                            </div>
 
-                    <div class="s-news--media-item">
-                        <div class="s-news--prop-block">
-                            <div class="s-news--prop-block-i">
-                                <img class="s-news--img" src="assets/img/news-inner-2.png" alt="">
+                            <div class="fd-input-wrap">
+                                <label for="inn" class="small-title black">ИНН</label>
+                                <input type="text" class="input-text" placeholder="ИНН" name="inn" id="inn">
+                            </div>
+
+                            <div class="fd-input-wrap">
+                                <label for="email" class="small-title black">Электронная почта</label>
+                                <input type="email" class="input-text" placeholder="Электронная почта" name="email" id="email">
+                            </div>
+
+                            
+                        </div>
+                        <div class="delivery-col">
+                            <h3 class="small-title black">Способ доставки</h3>
+                            <p class="text">Адрес доставки:</p>
+
+                            <div class="radio-btn-group">
+                                <div class="radio-gr">
+                                    <label for="region-1" class="radio-btn">
+                                        <input type="radio" class ="hidden-radio" name="region" id="region-1" value="0" hidden checked>
+                                        
+                                    </label>
+                                    <label for="region-1" class="small-title black">По Новосибирску</label>
+                                </div>
+                                
+                                <div class="radio-gr sec-radio">
+                                    <label for="region-2" class="radio-btn">
+                                        <input type="radio" class ="hidden-radio" name="region" id="region-2" value="1" hidden>
+                                        
+                                    </label>
+                                    <label for="region-2" class="small-title black">В другие регионы</label>
+                                </div>
+                                
+                                
+                            </div>
+
+                            <div class="delivery-form__address-block">
+                                
+                                <div class="radio-gr">
+                                    <label for="address-1" class="radio-btn">
+                                        <input type="radio" class ="hidden-radio" name="address" id="address-1" value="0" hidden checked>
+                                        
+                                    </label>
+                                    <label for="address-1" class="small-title black">Доставка по адресу</label>
+                                </div>
+
+                                <div class="fd-input-wrap">
+                                    <label for="street" class="small-title black">Улица</label>
+                                    <input type="text" name="street" id="street" class="input-text">
+                                </div>
+
+                                <div class="input-wrap-row">
+                                    <div class="input-wrap input-45">
+                                        <label for="house" class="small-title black">Дом</label>
+                                        <input type="text" name="house" id="house" class="input-text">
+                                    </div>
+                                    <div class="input-wrap input-45">
+                                        <label for="flat" class="small-title black">Квартира</label>
+                                        <input type="text" name="flat" id="flat" class="input-text">
+                                    </div>
+                                </div>
+
+                                
+                                <div class="radio-gr radio-gr radio-gr_pickup">
+                                    <label for="address-2" class="radio-btn">
+                                        <input type="radio" class ="hidden-radio" name="address" id="address-2" value="0" hidden >
+                                        
+                                    </label>
+                                    <label for="address-2">
+                                        <h3 class="small-title black">Самовывоз со клада:</h3>
+                                        <p class="text black">Новосибирск, ул. Ленина 1</p> 
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="delivery-form__delivery-block" style="display: none;">
+                                <div class="fd-input-wrap">
+                                    <label for="city" class="small-title black">Город</label>
+                                    <input type="text" name="city" id="city" class="input-text">
+                                </div>
+
+                                <div class="fd-input-wrap">
+                                    <label for="del-company" class="small-title black">Доставка транспортной компанией</label>
+                                    <div class="select-del-wrap">
+                                        <div class="select-del" style="">
+                                            <div class="select-del__current">СДЭК</div>
+                                            <div class="select-del__list">
+                                                <div class="select-del__item select-qty__item_selected">СДЭК</div>
+                                                <div class="select-del__item">Деловые линии</div>
+                                                <div class="select-del__item">ПЭК</div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="text" name="del-company" id="del-company" class="input-text" hidden value="СДЭК">
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="s-news--media-item">
-                        <div class="s-news--prop-block">
-                            <div class="s-news--prop-block-i">
 
-                                <!--
-                                    data-video - хранится ссылка на видео
-                                -->
+                    <div class="delivery-form__contacts">
+                        <p class="text">По вопросам доставки в другие районы уточняйте у наших менеджеров:</p>
 
-                                <div class="video-layer" data-video='<iframe  class="video-frame" width="400" height="200" src="https://www.youtube.com/embed/9K9LyKKaqJw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay="1"; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'>
-                                    <svg 
-                                        xmlns="http://www.w3.org/2000/svg"
-                                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                                            width="58px" height="58px">
-                                            <path fill-rule="evenodd"  fill="rgb(255, 255, 255)"
-                                                d="M29.000,57.998 C12.984,57.998 0.001,45.015 0.001,29.000 C0.001,12.984 12.984,0.001 29.000,0.001 C45.015,0.001 57.998,12.984 57.998,29.000 C57.998,45.015 45.015,57.998 29.000,57.998 ZM41.497,26.582 L25.796,16.017 C24.902,15.416 23.750,15.357 22.799,15.862 C21.848,16.369 21.254,17.358 21.254,18.435 L21.254,39.564 C21.254,40.641 21.848,41.631 22.799,42.137 C23.229,42.366 23.699,42.479 24.168,42.479 C24.738,42.479 25.306,42.312 25.796,41.982 L41.497,31.418 C42.302,30.876 42.784,29.970 42.784,29.000 C42.784,28.030 42.302,27.123 41.497,26.582 Z"/>
-                                    </svg>
-
-                                    <p class="video-layer__text">Смотреть видео</p>
+                        <div class="delivery-form__contacts-row">
+                            <div class="delivery-form__contacts-col">
+                                <div class="delivery-form__icon"><img src="assets/img/phone.png"></div>
+                                <div class="link-gr">
+                                    <a href="tel:+73422935083">+7 (342) 293-50-83 </a>
+                                    <button>Заказать звонок</button>
                                 </div>
                                 
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!--
-                    <div class="s-news--video-block">
-                        <div class="s-news--video-outer">
-                            <div class="s-news--video-inner">
-                                
+                            <div class="delivery-form__contacts-col">
+                                <div class="delivery-form__icon"><img src="assets/img/mail.png"></div>
+                                <div class="link-gr">
+                                    <a href="mailto:marmelad.mail.ru">marmelad.mail.ru</a>
+                                    <button>Написать нам</button>
+                                </div>
                             </div>
                         </div>
-                        
-                    </div>-->
-                </div>
-
-                <div class="page-block">
-                    <p class="text black">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис. Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт понимает под собой интеллект, однако Зигварт считал критерием истинности необходимость и общезначимость, для которых нет никакой опоры в объективном мире. Гетерономная этика, как следует из вышесказанного, очевидна не для всех. Гегельянство философски порождает и обеспечивает катарсис.</p>
-                </div>
+                    </div>
+                    <div class="delivery-form__footer">
+                        <div class="d-f--text">
+                            <h3 class="small-title black">Общая сумма заказа: 200 Р</h3>
+                            <p class="text">Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей <a href="#">политика конфиденциальности.</a></p>
+                        </div>
+                        <div class="d-f--button">
+                            <input type="submit" class="red-btn delivery-form__btn" value="Перейти к оплате">
+                        </div>
+                    </div>
+                </form>
+                
+            </div>
+            
+                
 
                 
                 
             
 
 
-            <!--BEGIN: news-block section-->
 
-            <section class="news-block">
-                <div class="news-block__inner">
-                    <div class="short-news">
-                        <div class="short-news__img-block">
-                            <img class="short-news__img" src="assets/img/products/news-1.png" alt="">
-                        </div>
-
-                        <div class="short-news__text-block">
-                            <p class="short-news__text">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт</p>
-                            <a class="short-news__link" href="#">Читать подробнее</a>
-                        </div>
-                    </div>
-
-                    <div class="short-news">
-                        <div class="short-news__img-block">
-                            <img class="short-news__img" src="assets/img/products/news-2.png" alt="">
-                        </div>
-
-                        <div class="short-news__text-block">
-                            <p class="short-news__text">Наряду с этим антропосоциология транспонирует сенсибельный здравый смысл. Культ джайнизма включает в себя поклонение Махавире и другим тиртханкарам, поэтому конфликт</p>
-                            <a class="short-news__link" href="#">Читать подробнее</a>
-                        </div>
-                    </div>
-
-
-                    
-
-                    
-                </div>
-            </section>
-
-            <!--END: news-block section-->
-        
-
-            <!--BEGIN: section low-banners-->
-            <section class="low-banners">
-
-
-                <div class="low-banner">
-                    <div class="low-banner__text">
-                        <h2 class="low-banner__title big-title">Мы точно знаем чем удивить вас!</h2>
-
-                        <h3 class="low-banner__description">Удивительные сладости со всего мира</h3>
-                    </div>                    
-                </div>
-
-                <div class="low-banner">
-                    <div class="low-banner__text">
-                        <h2 class="low-banner__title big-title">Мы точно знаем чем удивить вас!</h2>
-
-                        <h3 class="low-banner__description">Удивительные сладости со всего мира</h3>
-                    </div>                    
-                </div>
-
-            </section>
-            <!--END: section low-banners-->
         </div>
     </main>
     <!--END: main-section page-content -->
