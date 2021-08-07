@@ -354,7 +354,7 @@
                         адрес и адрес доставки, а также изменить пароль и основную информацию.</p>
                 </div>
 
-                <div class="reg-row cabinet-row">
+                <div class="reg-row cabinet-row c-b-r">
                     <div class="cabinet-menu-block col-4 buy-list-menu">
                         <ul class="cabinet-menu">
                             <li class="cabinet-menu__item"><a href="#" class="cabinet-menu__link cabinet-menu__link_active">Заказы</a></li>
@@ -364,53 +364,97 @@
                         </ul>
                     </div>
                     <div class="reg-form-block col-8 table-block">
-                        <div class="clear-buys-block">
-                            <button class="clear-buys-btn">Удалить все</button>
-                        </div>
-                        <div class="table-buy-list-wrap">
-                            <table class="table-buy-list">
-                                <tr>
-                                    <td class="del-cell"><button class="cart__del-product">x</button></td>
-                                    <td class="product-icon-cell"><img class="cart__product-icon" src="assets/img/product-pos.png" alt="Какой-то продукт"></td>
-                                    <td class="product-view-cell">
-                                        <p class="cart__product-view">Десерт рисовое моти со вкусом  винограда без сахара 180гр.</p>
-                                        <p class="cart__delivery">Доставка: <span class="cart__delivery-variant">Курьер</span></p>
-                                    </td>
-                                    <td class="product-price-cell"> <p class="cart__price">100 &#8381;</p>
-                                         <p class="cart__price"> <span class="cart__old-price">150 &#8381;</span><span class="cart__sale-price"> скидка 50 &#8381;</span></p>
-                                    </td>
-                                    
-                                    <td class="product-qty-cell"><p class="cart__qty">500 шт.</p></td>
-                                </tr>
-                                <tr>
-                                    <td class="del-cell"><button class="cart__del-product">x</button></td>
-                                    <td class="product-icon-cell"><img class="cart__product-icon" src="assets/img/product-pos.png" alt="Какой-то продукт"></td>
-                                    <td class="product-view-cell">
-                                        <p class="cart__product-view">Десерт рисовое моти со вкусом  винограда без сахара 180гр.</p>
-                                        <p class="cart__delivery">Доставка: <span class="cart__delivery-variant">Курьер</span></p>
-                                    </td>
-                                    <td class="product-price-cell"> <p class="cart__price">100 &#8381;</p>
-                                         <p class="cart__price"> <span class="cart__old-price">150 &#8381;</span><span class="cart__sale-price"> скидка 50 &#8381;</span></p>
-                                    </td>
-                                    
-                                    <td class="product-qty-cell"><p class="cart__qty">500 шт.</p></td>
-                                </tr>
+                        
+
+
+                        <div class="product-list-col">
+
+                            <div class="clear-cart-block">
+                                <button class="clear-cart">Удалить все</button>
+                            </div>
     
-                                <tr>
-                                    <td class="del-cell"><button class="cart__del-product">x</button></td>
-                                    <td class="product-icon-cell"><img class="cart__product-icon" src="assets/img/product-pos.png" alt="Какой-то продукт"></td>
-                                    <td class="product-view-cell">
+                            <div class="cart__product-list">
+                                <div class="cart__product-item">
+                                    <div class="cart__del-item">
+                                        <button class="cart__del-product">x</button>
+                                    </div>
+    
+                                    <div class="cart__product-icon-block">
+                                        <img class="cart__product-icon" src="assets/img/product-pos.png" alt="Какой-то продукт">
+                                    </div>
+                                    <div class="cart__product-info">
                                         <p class="cart__product-view">Десерт рисовое моти со вкусом  винограда без сахара 180гр.</p>
                                         <p class="cart__delivery">Доставка: <span class="cart__delivery-variant">Курьер</span></p>
-                                    </td>
-                                    <td class="product-price-cell"> <p class="cart__price">100 &#8381;</p>
-                                         <p class="cart__price"> <span class="cart__old-price">150 &#8381;</span><span class="cart__sale-price"> скидка 50 &#8381;</span></p>
-                                    </td>
+                                    </div>
+                                    <div class="cart-item-right">
+                                        <div class="cart__product-price">
+                                            <p class="cart__price">100 ₽</p>
+                                            <p class="cart__price"> <span class="cart__old-price">150 ₽</span><span class="cart__sale-price"> скидка 50 ₽</span></p>
+                                        </div>
+                                        <div class="cart__product-qty">
+                                            <p class="cart__qty">500 шт.</p>
+                                        </div>
+                                        
+                                    </div>
                                     
-                                    <td class="product-qty-cell"><p class="cart__qty">500 шт.</p></td>
-                                </tr>
-                            </table>
+                                </div>
+
+                                <div class="cart__product-item">
+                                    <div class="cart__del-item">
+                                        <button class="cart__del-product">x</button>
+                                    </div>
+    
+                                    <div class="cart__product-icon-block">
+                                        <img class="cart__product-icon" src="assets/img/product-pos.png" alt="Какой-то продукт">
+                                    </div>
+                                    <div class="cart__product-info">
+                                        <p class="cart__product-view">Десерт рисовое моти со вкусом  винограда без сахара 180гр.</p>
+                                        <p class="cart__delivery">Доставка: <span class="cart__delivery-variant">Курьер</span></p>
+                                    </div>
+                                    <div class="cart-item-right">
+                                        <div class="cart__product-price">
+                                            <p class="cart__price">100 ₽</p>
+                                            <p class="cart__price"> <span class="cart__old-price">150 ₽</span><span class="cart__sale-price"> скидка 50 ₽</span></p>
+                                        </div>
+                                        <div class="cart__product-qty">
+                                            <p class="cart__qty">500 шт.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="cart__product-item">
+                                    <div class="cart__del-item">
+                                        <button class="cart__del-product">x</button>
+                                    </div>
+    
+                                    <div class="cart__product-icon-block">
+                                        <img class="cart__product-icon" src="assets/img/product-pos.png" alt="Какой-то продукт">
+                                    </div>
+                                    <div class="cart__product-info">
+                                        <p class="cart__product-view">Десерт рисовое моти со вкусом  винограда без сахара 180гр.</p>
+                                        <p class="cart__delivery">Доставка: <span class="cart__delivery-variant">Курьер</span></p>
+                                    </div>
+                                    <div class="cart-item-right">
+                                        <div class="cart__product-price">
+                                            <p class="cart__price">100 ₽</p>
+                                            <p class="cart__price"> <span class="cart__old-price">150 ₽</span><span class="cart__sale-price"> скидка 50 ₽</span></p>
+                                        </div>
+                                        <div class="cart__product-qty">
+                                            <p class="cart__qty">500 шт.</p>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+    
                         </div>
+
+
+                        
                         
                             
 

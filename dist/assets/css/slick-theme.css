@@ -110,9 +110,8 @@
   -o-transition: .5s;
   transition: .5s; }
   .low-banners .slick-prev:hover {
-    background-image: url("../img/buttons/prev_red.png");
-    -webkit-filter: drop-shadow(0px 0px 2px #fe4944);
-            filter: drop-shadow(0px 0px 2px #fe4944); }
+    background-image: url("../img/buttons/prev_red-2.png");
+    background-size: 100% 100%; }
   @media (max-width: 768px) {
     .low-banners .slick-prev {
       left: 15px; } }
@@ -126,9 +125,8 @@
   -o-transition: .5s;
   transition: .5s; }
   .low-banners .slick-next:hover {
-    background-image: url("../img/buttons/next_red.png");
-    -webkit-filter: drop-shadow(0px 0px 2px #fe4944);
-            filter: drop-shadow(0px 0px 2px #fe4944); }
+    background-image: url("../img/buttons/next_red-2.png");
+    background-size: 100% 100%; }
   @media (max-width: 768px) {
     .low-banners .slick-next {
       right: 15px; } }
@@ -166,3 +164,62 @@
 
 .hight-banners .slick-next, .hight-banners .slick-prev {
   display: none !important; }
+
+.small-slider .slick-prev,
+.small-slider .slick-next {
+  position: absolute;
+  display: block;
+  height: 30px;
+  width: 18px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none; }
+  @media (max-width: 768px) {
+    .small-slider .slick-prev,
+    .small-slider .slick-next {
+      width: 20px;
+      height: 35px;
+      background-size: 100% 100%; } }
+
+.small-slider .slick-prev {
+  left: -25px;
+  background-image: url("../img/buttons/prev_black.png");
+  background-repeat: no-repeat;
+  z-index: 10;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .small-slider .slick-prev:hover {
+    background-image: url("../img/buttons/prev_red-2.png"); }
+  @media (max-width: 500px) {
+    .small-slider .slick-prev {
+      left: 15px; } }
+
+.small-slider .slick-next {
+  right: -25px;
+  background-image: url("../img/buttons/next_black.png");
+  background-repeat: no-repeat;
+  z-index: 10;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s; }
+  .small-slider .slick-next:hover {
+    background-image: url("../img/buttons/next_red-2.png"); }
+  @media (max-width: 500px) {
+    .small-slider .slick-next {
+      right: 15px; } }
+
+.small-slider .slick-slide {
+  margin: 0 15px; }
+
+.small-slider .slick-list {
+  margin: 0 -15px; }

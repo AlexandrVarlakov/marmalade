@@ -2,10 +2,41 @@
 $('.low-banners').slick();
 
 
+
 $('.hight-banners').slick({
     dots: true,
 });
 
+$('.big-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.small-slider'
+    
+});
+
+$('.small-slider').slick({
+    slidesToShow: 3,
+                      slidesToScroll: 1,
+                      asNavFor: '.big-slider',
+                      dots: true,
+                      
+                      focusOnSelect: true,
+
+                      responsive: [
+                        {
+                          breakpoint: 501,
+                          settings: {
+                            
+                            slidesToShow: 1
+                          }
+                        }
+                        
+                      ]
+    
+    
+});
 
 $(document).on('scroll', function(){
     if ( $(window).scrollTop() >= ( $('.header').height()  ) )  {
@@ -229,10 +260,10 @@ if ( $('.checkbox__input').is(':checked') ){
 }
                         
 $('.checkbox__input').on('click', function(){
-    if ( $('.checkbox__input').is(':checked') ){
-        $('.checkbox__input').parent().addClass( 'checkbox_checked');
+    if ( $(this).is(':checked') ){
+        $(this).parent().addClass( 'checkbox_checked');
     } else {
-        $('.checkbox__input').parent().removeClass( 'checkbox_checked');
+        $(this).parent().removeClass( 'checkbox_checked');
     }
 })
 
@@ -347,6 +378,7 @@ $('.select-del').on('click', function(){
     }
 })
 
+//Выпадающий список компаний доставки
 $('.select-del__item').on('click', function(){
     let val = $(this).html();
     $(this).siblings('.select-del__item').removeClass('select-del__item_selected');
@@ -354,7 +386,7 @@ $('.select-del__item').on('click', function(){
     $(this).parent().siblings('.select-del__current').html(val);
     $('#del-company').attr('value', val);
 })
-
+//radio способа доставки
 $('input:radio[name=region]').on('click', function(){
     switch ( $(this).val() ){
         case '0': 
@@ -367,3 +399,101 @@ $('input:radio[name=region]').on('click', function(){
                 break;
     }
 })
+
+
+//Выпадающий список фильтра
+$('.filter-parent-list__item').on('click', function(){
+
+    if ($(this).parent().hasClass('filter-parent-list_open') ){
+        $(this).parent().removeClass('filter-parent-list_open');
+        $(this).parent().children('.filter-child-list').hide(500);
+    } else {
+        $(this).parent().addClass('filter-parent-list_open');
+        $(this).parent().children('.filter-child-list').show(500);
+    }
+    
+})
+
+$('.filter-list__item').on('click', function(){
+    if ( $(this).hasClass('filter-parent-list')  === false ){
+        
+        if ( $(this).hasClass('filter-list__item_active') ){
+            $(this).removeClass('filter-list__item_active');
+        }else {
+            $(this).addClass('filter-list__item_active');
+        }
+
+        
+        
+    }  else {
+        
+    }
+})
+
+
+//Инициализирууем слайдер
+
+$( "#price-range" ).slider({
+    range: true,
+    min: 0,
+    max: 500,
+    values: [ 0, 500 ],
+    create: function( event, ui ) {
+        
+        
+    },
+    slide: function( event, ui ) {
+      $( ".price-range__min" ).val( "от " + ui.values[ 0 ]);
+      $( ".price-range__max" ).val( "до " + ui.values[ 1 ]);
+      
+      
+    }
+   
+  });
+
+
+  $('.show-all-cat').on('click', function(){
+      if ( $(this).html() == 'Посмотреть все' ){
+        $('.cat-filter-btn_hidden').addClass('cat-filter-btn_show');
+
+        $(this).html('Скрыть');
+      } else{
+        $('.cat-filter-btn_hidden').addClass('hide-filter-btn');
+        $('.cat-filter-btn_hidden').hide(300);
+
+
+        setTimeout(() => {
+            $('.cat-filter-btn_hidden').removeClass('cat-filter-btn_show');            
+        }, 300);
+    
+        setTimeout(() => {
+            $('.cat-filter-btn_hidden').css('display', '');
+            $('.cat-filter-btn_hidden').removeClass('hide-filter-btn');            
+        }, 500)
+
+
+        $(this).html('Посмотреть все');
+
+      }
+  })
+
+
+  //Устанавливаем стартовые значения
+  $( ".price-range__min" ).val( 'от ' + $( "#price-range" ).slider('values', 0));
+  $( ".price-range__max" ).val( 'до ' + $( "#price-range" ).slider('values', 1));
+
+
+  $('.show-h-cb').on('click', function(){
+    $(this).parent().children('.hidden').removeClass('hidden');
+
+    $(this).remove();
+  })
+
+
+  $('.show-filter-btn').on('click', function(){
+    $('.filter-panel').addClass('show-filter-panel');
+  })
+
+  $('.filter-panel__close').on('click', function(){
+    $('.filter-panel').removeClass('show-filter-panel');
+  });
