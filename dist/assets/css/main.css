@@ -4981,3 +4981,6 @@ ul.components li:after {
   @media (max-width: 570px) {
     .c-block_catalog-p .product-card {
       width: 100%; } }
+
+.test {
+  color: red; }
